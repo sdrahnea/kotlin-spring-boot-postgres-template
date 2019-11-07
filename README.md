@@ -1,4 +1,4 @@
-## Spring Boot Example
+## Spring Boot Example usgin Kotlin and Postgres
 
 To run:
 
