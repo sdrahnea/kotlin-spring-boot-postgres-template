@@ -1,3 +1,13 @@
-package eu.ap.tas.model
+package com.sdrahnea.app.model
 
-data class User(val id: Long, val content: String)
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.Id
+
+@Entity
+class User(
+        var login: String,
+        var firstname: String,
+        var lastname: String,
+        var description: String? = null,
+        @Id @GeneratedValue var id: Long? = null)

@@ -1,6 +1,6 @@
-package eu.ap.tas.controller
+package com.sdrahnea.app.controller
 
-import eu.ap.tas.model.User
+import com.sdrahnea.app.model.User
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -13,7 +13,7 @@ class UserController {
 
     @GetMapping("/user")
     fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) : User {
-        return User(counter.incrementAndGet(), "Hello, $name")
+        return User(counter.incrementAndGet().toString(), "Hello, $name", "last name")
     }
 
     fun signIn() : User {
