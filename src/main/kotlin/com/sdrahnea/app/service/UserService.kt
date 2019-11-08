@@ -4,5 +4,8 @@ import com.sdrahnea.app.repository.UserRepository
 import org.springframework.stereotype.Service
 
 @Service
-class UserService() {
+class UserService {
+
+    private lateinit var userRepository: UserRepository
+
 }
