@@ -8,10 +8,11 @@ import javax.persistence.ManyToOne
 
 @Entity
 class Article(
+        @Id @GeneratedValue var id: Long? = null,
         var title: String,
         var headline: String,
         var content: String,
-        @ManyToOne var author: User,
+        @ManyToOne var author: UserArticle,
         var slug: String = title,
-        var addedAt: LocalDateTime = LocalDateTime.now(),
-        @Id @GeneratedValue var id: Long? = null)
+        var addedAt: LocalDateTime = LocalDateTime.now()
+        )

@@ -14,7 +14,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion" // Required for Kotlin integration
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion" // See https://kotlinlang.org/docs/reference/compiler-plugins.html#spring-support
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
-        classpath "org.postgresql:postgresql:$postgresqlVersion"
     }
 }
 
@@ -51,7 +50,9 @@ dependencies {
     compile group: "org.springframework.boot", name: "spring-boot-starter-security", version: springBootVersion
 //    compile group: "org.springframework.boot", name: "spring-boot-starter-jdbc", version: springBootVersion
     compile group: "org.springframework.boot", name: "spring-boot-starter-data-jpa", version: springBootVersion
-//    spring-boot-starter-data-jpa
+
+    //PostgreSQL
+    compile group: "org.postgresql", name: "postgresql", version: postgresqlVersion
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion" // Required for Kotlin integration
     compile "org.springframework.boot:spring-boot-starter-web"
