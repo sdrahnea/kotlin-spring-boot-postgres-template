@@ -5,15 +5,17 @@ server:
 # database connection
 spring:
   datasource:
-    platform: postgres
+    platform: postgresql
     url: jdbc:postgresql://127.0.0.1:5432/template
     driverClassName: org.postgresql.Driver
     username: postgres
     password: postgres
   jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  #autoconfigure:
+  #  exclude:
+   #   - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
