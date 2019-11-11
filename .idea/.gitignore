@@ -1,0 +1,9 @@
+
+# Default ignored files
+/workspace.xml
+/misc.xml
+/dbnavigator.xml
+/gradle.xml
+/.idea/*
+/build/*
+/.gradle/*
