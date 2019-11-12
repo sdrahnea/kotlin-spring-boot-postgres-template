@@ -2,3 +2,7 @@
 /.idea/*
 /build/*
 /.gradle/4.10*
+/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/.gradle/buildOutputCleanup/cache.properties
+/.gradle/vcs-1/gc.properties
+/.gradle/buildOutputCleanup/outputFiles.bin
