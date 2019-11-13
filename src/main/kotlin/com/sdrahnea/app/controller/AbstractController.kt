@@ -12,6 +12,11 @@ abstract class AbstractController<T> {
         return service.findAll()
     }
 
+    /*@RequestMapping(method = [RequestMethod.GET])
+    fun count(): Long {
+        return service.count()
+    }*/
+
     @GetMapping(value = ["/{id}"])
     fun findById(@PathVariable("id") id: Long): T? {
         return service.findById(id)
@@ -21,5 +26,20 @@ abstract class AbstractController<T> {
     fun save(@RequestBody entity: T){
         service.save(entity)
     }
+
+    @RequestMapping(method = [RequestMethod.DELETE])
+    fun deleteAll() {
+        service.deleteAll()
+    }
+
+    @RequestMapping(method = [RequestMethod.DELETE], value = ["/{id}"])
+    fun delete(@PathVariable("id") id: Long) {
+        service.delete(id)
+    }
+/*
+    @RequestMapping(method = [RequestMethod.DELETE])
+    fun delete(@RequestBody entity: T) {
+        service.delete(entity)
+    }*/
 
 }

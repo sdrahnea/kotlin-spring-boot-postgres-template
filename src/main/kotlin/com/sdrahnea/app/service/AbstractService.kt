@@ -19,4 +19,20 @@ abstract class AbstractService<T> {
         return repository.save(entity)
     }
 
+    fun delete(id: Long) {
+        repository.deleteById(id)
+    }
+
+    fun deleteAll(){
+        repository.deleteAll()
+    }
+
+    fun delete(entity: T) {
+        repository.delete(entity)
+    }
+
+    fun count(): Long {
+        return repository.count()
+    }
+
 }
